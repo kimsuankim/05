@@ -5,17 +5,19 @@
 
 int main(int argc, char *argv[]) {
 	
-	int x;
+	int c, num=0; //reset
 	
-	printf("정수 하나를 입력하시오  : ");
-	scanf("%d", &x);
+	printf("input a string : ");
+	scanf("%c", &c);
 	
-	if(x>=0) 
-	  printf("절댓값은 %d입니다.",x);
-	  
-	  
-	else
-	  printf("절댓값은 %d입니다.",-x);
+	while((c= getchar()) != '\n')
+	 {
+	 	if(c>='0'&& c<='9')
+	 	 num++;
+	 	 
+	 }
+	
+	printf("the number of digits is %i\n",num);
 	
 	return 0;
 }
